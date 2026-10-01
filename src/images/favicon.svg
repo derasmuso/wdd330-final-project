@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">NBA stats app icon: a basketball with a rising bar chart</title>
+
+  <!-- Navy rounded-square background -->
+  <rect width="512" height="512" rx="104" fill="#071D49"/>
+
+  <!-- Gold basketball -->
+  <circle cx="256" cy="256" r="164" fill="#FFC72C"/>
+
+  <!-- Basketball seams -->
+  <g fill="none" stroke="#071D49" stroke-width="12" stroke-linecap="round">
+    <line x1="256" y1="94" x2="256" y2="418"/>
+    <line x1="94" y1="256" x2="418" y2="256"/>
+    <path d="M148 138 C 206 196 206 316 148 374"/>
+    <path d="M364 138 C 306 196 306 316 364 374"/>
+  </g>
+
+  <!-- Rising bar chart (navy outline separates bars from the ball) -->
+  <g fill="#FFFFFF" stroke="#071D49" stroke-width="12" stroke-linejoin="round">
+    <rect x="172" y="306" width="48" height="84" rx="6"/>
+    <rect x="232" y="258" width="48" height="132" rx="6"/>
+    <rect x="292" y="204" width="48" height="186" rx="6"/>
+  </g>
+</svg>
