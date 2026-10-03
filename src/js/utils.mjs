@@ -22,4 +22,24 @@ export async function loadHeaderFooter() {
 
     renderWithTemplate(headerTemplate, headerElement);
     renderWithTemplate(footerTemplate, footerElement);
+
+    function setActiveNavLink() {
+        const current = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
+
+        document.querySelectorAll(".nav-links a").forEach((link) => {
+            if (link.pathname === current) {
+                link.classList.add("active");
+            }
+        });
+    }
+    setActiveNavLink();
+
+    const navbutton = document.querySelector(".ham-btn");
+    const navBar = document.querySelector(".nav-links");
+
+    navbutton.addEventListener("click", () => {
+        navbutton.classList.toggle("show");
+        navBar.classList.toggle("show");
+    });
 }
+
