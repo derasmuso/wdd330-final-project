@@ -1,0 +1,161 @@
+:root {
+    /*colors*/
+    --primary-color: #071D49;
+    --secondary-color: #FFC72C;
+    --accent-color-white: #FFFFFF;
+    --accent-color-black: #111111;
+
+    /*fonts*/
+    --font-primary: "Bebas Neue", sans-serif;
+    --font-secondary: "Barlow Semi Condensed", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--accent-color-black);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+#main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 0.5rem;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo span {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--accent-color-white);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.3s ease, visibility 0.3s;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--accent-color-white);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav-links a.active {
+    border-bottom-color: var(--secondary-color);
+}
+
+
+.ham-btn {
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    color: var(--accent-color-white);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ham-btn::before {
+    content: "☰";
+}
+
+.ham-btn.show::before {
+    content: "✕";
+}
+
+.nav-links.show {
+    max-height: 300px;
+    visibility: visible;
+}
+
+/* Footer */
+#main-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Larger view */
+@media (min-width: 700px) {
+
+    /* Header */
+    #main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 4rem;
+    }
+
+    .logo {
+        padding: 1.25rem 0;
+    }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo span {
+        font-size: 2.5rem;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        visibility: visible;
+        gap: 3.5rem;
+    }
+
+    .nav-links a {
+        padding: 0;
+        font-size: 1.4rem;
+    }
+
+    .ham-btn {
+        display: none;
+    }
+}
