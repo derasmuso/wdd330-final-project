@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | The Stats Sheet</title>
+    <meta name="description" content="Search NBA players, view season stats, and browse every team's roster by season.">
+    <meta name="author" content="Daniel Rasmuson">
     <!-- Favicon -->
     <link rel="icon" href="/images/favicon.svg">
     <!-- Fonts -->
@@ -15,23 +17,77 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/main.js"></script>
 
 </head>
 
 <body>
+    <!-- Header -->
     <header id="main-header">
-        <!-- Header content will be loaded here -->
+
     </header>
 
     <main>
-        <!-- Main content will be loaded here -->
-        <h1 class="home-title">Welcome to The Stats Sheet</h1>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1 class="home-title">Welcome to The Stats Sheet</h1>
+                <p>Search any player to see their season averages, browse every team's roster, and look back at past
+                    seasons.
+                </p>
+                <div class="hero-btns">
+                    <a href="/pages/search.html">Search Players</a>
+                    <a href="/pages/directory.html">Browse Teams</a>
+                </div>
+            </div>
+            <img src="/images/hero.webp" alt="Hero Image" />
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how">
+            <h2>How It Works</h2>
+            <ol>
+                <li class="how-card">
+                    <h3>Search a player</h3>
+                    <p>Type a first or last name, or pick a team to see its roster.</p>
+                </li>
+                <li class="how-card">
+                    <h3>Open their page</h3>
+                    <p>See their biography and season averages.</p>
+                </li>
+                <li class="how-card">
+                    <h3>Pick a season</h3>
+                    <p>Switch seasons to compare how their stats changed.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Explore Section -->
+        <section class="explore">
+            <h2>Explore</h2>
+            <div class="explore-links">
+                <a href="/pages/search.html" class="explore-card">
+                    <h3>Players</h3>
+                    <p>Search players and view their season stats.</p>
+                </a>
+                <a href="/pages/directory.html" class="explore-card">
+                    <h3>Teams</h3>
+                    <p>Browse all 30 teams and their rosters by season.</p>
+                </a>
+                <a href="/pages/favorites.html" class="explore-card">
+                    <h3>Favorites</h3>
+                    <p>Jump back to the players and teams you've saved.</p>
+                </a>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Footer -->
     <footer id="main-footer">
-        <!-- Footer content will be loaded here -->
+
     </footer>
 
 </body>
