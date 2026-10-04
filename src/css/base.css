@@ -4,6 +4,7 @@
     --secondary-color: #FFC72C;
     --accent-color-white: #FFFFFF;
     --accent-color-black: #111111;
+    --border-color: #dddddd;
 
     /*fonts*/
     --font-primary: "Bebas Neue", sans-serif;
@@ -74,6 +75,7 @@ img {
     font-weight: 600;
     font-size: 1.15rem;
     color: var(--accent-color-white);
+    background-color: var(--primary-color);
     text-decoration: none;
     border-bottom: 4px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
@@ -116,6 +118,8 @@ img {
 #main-footer {
     text-align: center;
     padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
 }
 
 /* Larger view */

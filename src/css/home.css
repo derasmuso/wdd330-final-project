@@ -1,0 +1,202 @@
+/*  Layout  */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 1.5rem 1rem 3rem;
+}
+
+.home-title {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main h3 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+main p {
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+p {
+    font-family: var(--font-body);
+}
+
+/*  Hero  */
+.hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+
+}
+
+.hero-btns a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.hero-btns a:active {
+    transform: scale(0.98);
+}
+
+/* Search Players Button */
+.hero-btns a:first-child {
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
+}
+
+.hero-btns a:first-child:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Browse Teams Button */
+.hero-btns a:last-child {
+    background-color: var(--accent-color-white);
+    color: var(--primary-color);
+}
+
+.hero-btns a:last-child:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/*  Cards  */
+.how-card,
+.explore-card {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--accent-color-white);
+}
+
+/*  How It Works */
+.how ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    counter-reset: step
+}
+
+.how-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: center;
+    counter-increment: step;
+}
+
+.how-card::before {
+    content: counter(step);
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
+}
+
+.how-card p {
+    font-size: 0.95rem;
+}
+
+/*  Explore  */
+.explore-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.explore-card {
+    display: block;
+    color: var(--accent-color-black);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.explore-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.explore-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+/*  Larger view */
+@media (min-width: 900px) {
+
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem 2rem 4rem;
+        gap: 3rem;
+    }
+
+    /* Hero */
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .home-title {
+        font-size: 4rem;
+    }
+
+    .hero-btns {
+        flex-direction: row;
+
+    }
+
+    .hero-btns a {
+        padding: 0.6rem 1.25rem;
+    }
+
+    /* How It Works and Explore */
+    .how ol,
+    .explore-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .how-card,
+    .explore-card {
+        padding: 1.25rem;
+    }
+}
