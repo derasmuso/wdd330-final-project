@@ -119,3 +119,18 @@ export function showMessage(element, message) {
 export function showError(element, message = "Something went wrong. Please try again.") {
     element.innerHTML = `<p class="message-error">${message}</p>`;
 }
+
+// retrieve from localStorage
+export function getLocalStorage(key) {
+    return JSON.parse(localStorage.getItem(key));
+}
+
+// save to localStorage
+export function setLocalStorage(key, data) {
+    localStorage.setItem(key, JSON.stringify(data));
+}
+
+// remove from localStorage
+export function removeLocalStorage(key) {
+    localStorage.removeItem(key);
+}
