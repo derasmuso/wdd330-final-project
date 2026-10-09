@@ -19,7 +19,7 @@ export function teamCardTemplate(team) {
     return `
         <li class="card team-card">
             <a href="/pages/team.html?id=${team.id}">
-                <span class="team-abbr">${team.abbreviation}</span>
+                <img src="${team.logo || "/images/logo.png"}" alt="" class="team-logo" loading="lazy" onerror="this.onerror=null; this.src='/images/logo.png';">
                 <h3>${team.full_name}</h3>
                 <p class="card-detail">${team.division} Division</p>
             </a>
