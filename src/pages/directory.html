@@ -15,6 +15,7 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/directory.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/directory.js"></script>
 
@@ -27,7 +28,24 @@
 
     <main>
         <!-- Main content -->
-        <h1 class="page-title">Team Directory</h1>
+        <section class="directory-intro">
+            <h1>Team Directory</h1>
+            <p>Browse all 30 NBA teams by conference. Select a team to see its roster.</p>
+        </section>
+
+        <!-- Loading and error messages -->
+        <div id="directory-status"></div>
+
+        <section class="conference">
+            <h2>Eastern Conference</h2>
+            <ul id="east" class="card-grid"></ul>
+        </section>
+        <section class="conference">
+            <h2>Western Conference</h2>
+            <ul id="west" class="card-grid"></ul>
+        </section>
+
+        <p class="note">If a team's logo isn't available, The Stats Sheet logo is shown instead.</p>
     </main>
 
     <footer id="main-footer">

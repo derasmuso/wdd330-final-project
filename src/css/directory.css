@@ -1,0 +1,55 @@
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+/* Intro */
+.directory-intro {
+    margin-bottom: 2rem;
+}
+
+.directory-intro h1 {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.directory-intro p {
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+/* Conference sections */
+.conference {
+    margin-bottom: 2.5rem;
+}
+
+.conference h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Logo note */
+.note {
+    font-size: 0.90rem;
+    font-style: italic;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Larger view */
+@media (min-width: 700px) {
+    main {
+        padding: 2.5rem 2rem 4rem;
+    }
+
+    .directory-intro h1 {
+        font-size: 3.5rem;
+    }
+}
