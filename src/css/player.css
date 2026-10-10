@@ -1,0 +1,146 @@
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+/* Player bio */
+.player-bio {
+    margin-bottom: 2.5rem;
+}
+
+.player-name {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.player-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.player-details div {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--accent-color-white);
+}
+
+.player-details dt {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.player-details dd {
+    font-size: 1.05rem;
+}
+
+/* Stats header */
+.stats-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.stats-header h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Season dropdown */
+.season-selection {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.season-selection label {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.season-selection select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--accent-color-black);
+    background-color: var(--accent-color-white);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.season-selection select:hover,
+.season-selection select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Stats table */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.stats-table caption {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.stats-table th {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.stats-table th abbr {
+    text-decoration: none;
+    cursor: help;
+}
+
+.stats-table td {
+    padding: 0.75rem;
+    font-size: 1.05rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Larger view */
+@media (min-width: 700px) {
+    main {
+        padding: 2.5rem 2rem 4rem;
+    }
+
+    .player-name {
+        font-size: 3.5rem;
+    }
+
+    .player-details {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
