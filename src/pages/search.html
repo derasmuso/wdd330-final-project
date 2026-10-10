@@ -15,6 +15,7 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/search.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/search.js"></script>
 
@@ -27,7 +28,23 @@
 
     <main>
         <!-- Main content -->
-        <h1 class="page-title">Player Search</h1>
+        <section class="search-intro">
+            <h1>Player Search</h1>
+            <p>Search for an NBA player by last name. Select a player to see their stats.</p>
+        </section>
+
+        <!-- Search form -->
+        <form class="player-form" role="search">
+            <label class="label-hidden" for="player-search">Player Search</label>
+            <input id="player-search" name="q" type="search" placeholder="Search players" autocomplete="off" />
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Loading and error messages -->
+        <div id="search-status"></div>
+
+        <!-- Results -->
+        <ul id="search-results" class="card-grid"></ul>
     </main>
 
     <footer id="main-footer">
