@@ -15,6 +15,7 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/player.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/player.js"></script>
 
@@ -26,8 +27,30 @@
     </header>
 
     <main>
-        <!-- Main content -->
-        <h1 class="page-title">Player Profile</h1>
+        <!-- Page Loading message -->
+        <div id="player-status"></div>
+
+        <!-- Player bio -->
+        <section class="player-bio">
+            <h1 class="player-name">Player Profile</h1>
+            <dl class="player-details"></dl>
+        </section>
+
+        <!-- Player stats -->
+        <section class="player-stats" hidden>
+            <div class="stats-header">
+                <h2>Season Averages</h2>
+                <div class="season-selection">
+                    <label for="season-select">Season</label>
+                    <select id="season-select"></select>
+                </div>
+            </div>
+
+            <!-- Stats loading message -->
+            <div id="stats-status"></div>
+
+            <div id="stats-table"></div>
+        </section>
     </main>
 
     <footer id="main-footer">

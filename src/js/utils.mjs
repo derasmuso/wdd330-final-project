@@ -62,6 +62,30 @@ export function formatSeason(season) {
     return `${season}-${nextYear}`;
 }
 
+// Seasons allowed on the API-Sports free plan
+export const SEASONS = [2024, 2023, 2022];
+
+// Fills season select element
+export function renderSeasonOptions(selectElement, seasons, selectedSeason) {
+    selectElement.innerHTML = seasons
+        .map((season) => `<option value="${season}" ${season === selectedSeason ? "selected" : ""}>${formatSeason(season)}</option>`)
+        .join("");
+}
+
+// Reads the season from the URL
+export function getSeasonParam(seasons) {
+    const season = Number(getParam("season"));
+    return seasons.includes(season) ? season : seasons[0];
+}
+
+// Updates the season in the URL without reloading the page
+export function setSeasonParam(season) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("season", season);
+    history.replaceState(null, "", url);
+}
+
+
 // formatPercent(9, 20) = 45.0%
 export function formatPercent(made, attempted) {
     if (!attempted) {
