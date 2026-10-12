@@ -15,6 +15,7 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/team.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/team.js"></script>
 
@@ -26,8 +27,33 @@
     </header>
 
     <main>
-        <!-- Main content -->
-        <h1 class="page-title">Team Profile</h1>
+        <!-- Team loading message -->
+        <div id="team-status"></div>
+
+        <!-- Team information -->
+        <section class="team-info">
+            <div class="team-heading">
+                <img class="team-page-logo" alt="" hidden>
+                <h1 class="team-name">Team Profile</h1>
+            </div>
+            <dl class="team-details"></dl>
+        </section>
+
+        <!-- Team roster -->
+        <section class="team-roster" hidden>
+            <div class="roster-header">
+                <h2>Roster</h2>
+                <div class="season-selection">
+                    <label for="season-select">Season</label>
+                    <select id="season-select"></select>
+                </div>
+            </div>
+
+            <!-- Roster loading message -->
+            <div id="roster-status"></div>
+
+            <ul id="roster-list" class="card-grid"></ul>
+        </section>
     </main>
 
     <footer id="main-footer">

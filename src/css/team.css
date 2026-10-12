@@ -1,0 +1,128 @@
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+/* Team information */
+.team-info {
+    margin-bottom: 2.5rem;
+}
+
+.team-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-page-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-name {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    line-height: 1;
+}
+
+.team-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+}
+
+.team-details div {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--accent-color-white);
+}
+
+.team-details dt {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.team-details dd {
+    font-size: 1.05rem;
+}
+
+/* Roster header */
+.roster-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.roster-header h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Season dropdown */
+.season-selection {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.season-selection label {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.season-selection select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--accent-color-black);
+    background-color: var(--accent-color-white);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.season-selection select:hover,
+.season-selection select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Roster status messages */
+#roster-status {
+    margin-bottom: 1rem;
+}
+
+/* Larger view */
+@media (min-width: 700px) {
+    main {
+        padding: 2.5rem 2rem 4rem;
+    }
+
+    .team-page-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .team-name {
+        font-size: 3.5rem;
+    }
+
+    .team-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
