@@ -8,6 +8,7 @@ import {
     setSeasonParam,
     SEASONS,
 } from "./utils.mjs";
+import { setupFavoriteButton } from "./favoriteStorage.mjs";
 
 const STAT_COLUMNS = [
     { key: "games", label: "GP", title: "Games played" },
@@ -115,6 +116,7 @@ export default class PlayerDetails {
         document.querySelector(".player-name").textContent = name;
         document.querySelector(".player-details").innerHTML = playerDetailsTemplate(this.player);
         document.querySelector(".player-stats").hidden = false;
+        setupFavoriteButton(document.querySelector("#favorite-btn"), "player", this.player);
     }
 
     setupSeasonSelect() {

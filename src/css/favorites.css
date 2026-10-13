@@ -1,0 +1,80 @@
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 3rem;
+}
+
+/* Intro */
+.favorites-intro {
+    margin-bottom: 2rem;
+}
+
+.favorites-intro h1 {
+    font-family: var(--font-primary);
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.favorites-intro p {
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+/* Sections */
+.favorites-section {
+    margin-bottom: 2.5rem;
+}
+
+.favorites-section h2 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Cards with a Remove button */
+.favorites-grid .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites-grid .card a {
+    flex: 1;
+}
+
+.remove-btn {
+    margin: 0 1rem 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #8a1c13;
+    border-radius: 6px;
+    background-color: var(--accent-color-white);
+    color: #8a1c13;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.remove-btn:hover {
+    background-color: #8a1c13;
+    color: var(--accent-color-white);
+}
+
+.remove-btn:active {
+    transform: scale(0.98);
+}
+
+/* Larger view */
+@media (min-width: 700px) {
+    main {
+        padding: 2.5rem 2rem 4rem;
+    }
+
+    .favorites-intro h1 {
+        font-size: 3.5rem;
+    }
+}

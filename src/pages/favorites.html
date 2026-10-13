@@ -15,6 +15,7 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/favorites.css" />
     <!-- JavaScript -->
     <script type="module" src="/js/favorites.js"></script>
 
@@ -26,8 +27,22 @@
     </header>
 
     <main>
-        <!-- Main content -->
-        <h1 class="page-title">Favorites</h1>
+        <section class="favorites-intro">
+            <h1>Favorites</h1>
+            <p>Players and teams you've saved. Select one to view it.</p>
+        </section>
+
+        <section class="favorites-section">
+            <h2>Favorite Players</h2>
+            <div id="player-favorites-status"></div>
+            <ul id="player-favorites" class="card-grid favorites-grid"></ul>
+        </section>
+
+        <section class="favorites-section">
+            <h2>Favorite Teams</h2>
+            <div id="team-favorites-status"></div>
+            <ul id="team-favorites" class="card-grid favorites-grid"></ul>
+        </section>
     </main>
 
     <footer id="main-footer">
