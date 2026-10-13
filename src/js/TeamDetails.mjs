@@ -9,6 +9,7 @@ import {
     SEASONS,
 } from "./utils.mjs";
 import { playerCardTemplate } from "./cards.mjs";
+import { setupFavoriteButton } from "./favoriteStorage.mjs";
 
 // balldontlie uses "East" / "West"
 const CONFERENCE_NAMES = { East: "Eastern", West: "Western" };
@@ -80,10 +81,13 @@ export default class TeamDetails {
         document.title = `${this.team.full_name} | The Stats Sheet`;
         document.querySelector(".team-name").textContent = this.team.full_name;
         document.querySelector(".team-details").innerHTML = teamDetailsTemplate(this.team);
+        setupFavoriteButton(document.querySelector("#favorite-btn"), "team", this.team);
     }
 
     renderLogo() {
         const logo = document.querySelector(".team-page-logo");
+        // Saves the logo so it is displayed on the favorites page
+        this.team.logo = this.sportsTeam.logo;
 
         // Show The Stats Sheet logo if the team's logo fails
         logo.onerror = () => {

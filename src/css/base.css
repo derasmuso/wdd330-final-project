@@ -212,6 +212,42 @@ img {
     color: #8a1c13;
 }
 
+/* Favorite button for players and teams */
+.favorite-btn {
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.25rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    background-color: var(--accent-color-white);
+    color: var(--primary-color);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.favorite-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color-white);
+}
+
+.favorite-btn:active {
+    transform: scale(0.98);
+}
+
+.favorite-btn.is-favorite {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.favorite-btn.is-favorite:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--accent-color-white);
+}
+
 /* Larger view */
 @media (min-width: 700px) {
 
