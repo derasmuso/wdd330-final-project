@@ -249,7 +249,7 @@ img {
 }
 
 /* Larger view */
-@media (min-width: 700px) {
+@media (min-width: 960px) {
 
     /* Header */
     #main-header {
